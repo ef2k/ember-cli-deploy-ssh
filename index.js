@@ -3,7 +3,7 @@
 var SSHAdapter = require('./lib/ssh-adapter');
 
 module.exports = {
-  name: 'ember-deploy-ssh-index',
+  name: 'ember-cli-deploy-ssh',
   type: 'ember-deploy-addon',
   adapters: {
     index: {
