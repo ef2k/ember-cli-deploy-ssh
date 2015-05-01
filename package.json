@@ -1,7 +1,7 @@
 {
-  "name": "ember-deploy-ssh-index",
+  "name": "ember-deploy-cli-ssh",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Deploy your Ember revisions via ssh.",
   "directories": {
     "doc": "doc"
   },
@@ -10,7 +10,7 @@
     "build": "ember build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/treyhunner/ember-deploy-ssh-index/",
+  "repository": "https://github.com/eddflrs/ember-cli-deploy-ssh",
   "engines": {
     "node": ">= 0.10.0"
   },
