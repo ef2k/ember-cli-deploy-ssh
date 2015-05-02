@@ -51,6 +51,30 @@ module.exports = {
 
 ## Directory Structure ##
 
+The following directory structure is created on your server. The basic gist is that your revisions will be stored inside of their own directory along with meta data about the revision (date of commit, commit message, author of the commit, and commit hash). Information about your revisions is viewable via the following command `ember deploy:list -e <your environment>`. Output will look like this:
+
+```sh
+
+The following revisions were found:
+
+    Revision: f6b1807
+    Date: Fri May 1 02:16:12 2015 -0400
+    Commit: f6b180782c123bbf3ee8e8b0e935301b674e5f10
+        Update comments in Brocfile for better documentation.
+    Author: Eddie Flores <eddflrs@gmail.com>
+    Activate: ember deploy:activate -r f6b1807 -e <environment>
+    Preview: http://www.domain.com/rev/f6b1807
+
+    Revision: d188a58
+    Date: Fri May 1 02:16:12 2015 -0400
+    Commit: d188a589013e2d72efad05ec078d6a546106c887
+        A whole new readme.
+    Author: Eddie Flores <eddflrs@gmail.com>
+    Activate: ember deploy:activate -r f6b1807 -e <environment>
+    Preview: http://www.domain.com/rev/f6b1807
+
+```
+
 ```
 # In your server's file directory...
 
