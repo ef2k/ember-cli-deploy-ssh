@@ -46,45 +46,62 @@ module.exports = {
 
 ```
 
-
-> This project is based on this great repo: https://github.com/treyhunner/ember-deploy-ssh-index. Though, it's been modified to be serve a different purpose, lets give credit to where credit is due. On a related note, bug fixes and improvements will be pulled from upstream whenever possible.
-
 ## Directory Structure ##
 
-The following directory structure is created on your server. The basic gist is that your revisions will be stored inside of their own directory along with meta data about the revision (date of commit, commit message, author of the commit, and commit hash). Information about your revisions is viewable via the following command `ember deploy:list -e <your environment>`. Output will look like this:
+The following directory structure is created on your server. The basic gist is that your revisions will be stored inside of their own directory along with meta data about the revision (date of commit, commit message, author of the commit, and commit hash). Information about your revisions is viewable via the following command `ember deploy:list -e <your environment>`.
+
+**List revisions**
+
+```sh
+$ ember deploy:list -e staging
+```
 
 ```sh
 
 The following revisions were found:
 
-    Revision: f6b1807
-    Date: Fri May 1 02:16:12 2015 -0400
-    Commit: f6b180782c123bbf3ee8e8b0e935301b674e5f10
-        Update comments in Brocfile for better documentation.
-    Author: Eddie Flores <eddflrs@gmail.com>
-    Activate: ember deploy:activate -r f6b1807 -e <environment>
-    Preview: http://www.domain.com/rev/f6b1807
+   Revision:  516d6e2
+   Commit:    516d6e26bcb7e75c2620eae87eeb37ce1e481f8f
+   Author:    Eddie Flores <eddflrs@gmail.com>
+   Date:      Mon May 11 23:23:53 2015 -0400
+   Message:   Hello-added
+   Filepath:  /home/eddie/html/516d6e2/meta.json
 
-    Revision: d188a58
-    Date: Fri May 1 02:16:12 2015 -0400
-    Commit: d188a589013e2d72efad05ec078d6a546106c887
-        A whole new readme.
-    Author: Eddie Flores <eddflrs@gmail.com>
-    Activate: ember deploy:activate -r f6b1807 -e <environment>
-    Preview: http://www.domain.com/rev/f6b1807
 
+   Revision:  d821149
+   Commit:    d8211495be55c3e8b839ab963d9fec1910a44b05
+   Author:    Eddie Flores <eddflrs@gmail.com>
+   Date:      Fri May 1 08:17:40 2015 -0400
+   Message:   Update-comments-in-Brocfile-for-better-documentation
+   Filepath:  /home/eddie/html/d821149/meta.json
+
+```
+
+**Deploy revision**
+
+```sh
+$ ember deploy -e staging
 ```
 
 ```
 # In your server's file directory...
 
-/revision:abc123/
+abc123/
     index.html           # The index file
-    revision.json        # Meta data about this revision
+    meta.json            # Meta data about this revision
 
-/revision:def456/
+def456/
     ...
 
-index.html --> /revision:abc123/index.html  # Active symlink
+index.html --> abc123/index.html  # Active symlink
 
 ```
+
+**Activate revision**
+
+```sh
+$ ember deploy:activate -e staging -r <revisionId>
+```
+
+
+> This project is based on this repo: https://github.com/treyhunner/ember-deploy-ssh-index. Though, it's been heavily modified to serve a different purpose -credit where credit is due.
