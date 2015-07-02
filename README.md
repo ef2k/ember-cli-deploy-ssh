@@ -48,8 +48,9 @@ module.exports = {
 ```
 
 **SSH Configuration**
+
 The following parameters are available to setup correctly ssh:
--------------
+
 * **host** - Hostname or IP address of the server (**required**)
 * **port** - Port of the server (**optional**)
 * **username** - Username for authentication (**required**)
