@@ -48,11 +48,12 @@ module.exports = {
 ```
 
 **SSH Configuration**
+
 The following parameters are available to setup correctly ssh:
--------------
+
 * **host** - Hostname or IP address of the server (**required**)
-* **port** - Port of the server (**optional**)
 * **username** - Username for authentication (**required**)
+* **port** - Port of the server (**optional**)
 * **privateKeyFile** - String that contains a private key for either key-based or hostbased user authentication (**optional**)
 * **passphrase** - Passphrase used to decrypt private key, if needed (**optional**)
 * **agent** - Path to ssh-agent's UNIX socket for ssh-agent-based user authentication (**optional**)
