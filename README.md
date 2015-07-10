@@ -26,6 +26,7 @@ var stagingEnvironment = {
     type: 'ssh', // the default store is 'redis', use 'ssh' for this addon.
     remoteDir: process.env['APP_STAGING_REMOTE_DIR_PATH'],
     host: process.env['APP_STAGING_REMOTE_HOST_IP'],
+    port: process.env['APP_STAGING_REMOTE_SSH_PORT'],
     username: process.env['APP_STAGING_REMOTE_USERNAME'],
     privateKeyFile: process.env['APP_STAGING_REMOTE_PRIVATE_KEY']
   },
@@ -45,6 +46,18 @@ module.exports = {
 };
 
 ```
+
+**SSH Configuration**
+
+The following parameters are available to setup correctly ssh:
+
+* **host** - Hostname or IP address of the server (**required**)
+* **username** - Username for authentication (**required**)
+* **port** - Port of the server (**optional**)
+* **privateKeyFile** - String that contains a private key for either key-based or hostbased user authentication (**optional**)
+* **passphrase** - Passphrase used to decrypt private key, if needed (**optional**)
+* **agent** - Path to ssh-agent's UNIX socket for ssh-agent-based user authentication (**optional**)
+
 
 ## Directory Structure ##
 
