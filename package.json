@@ -40,6 +40,7 @@
   ],
   "dependencies": {
     "core-object": "^1.1.0",
+    "silent-error": "^1.0.0",
     "ssh2": "^0.4.4"
   }
 }
