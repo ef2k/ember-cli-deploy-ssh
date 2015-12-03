@@ -1,5 +1,8 @@
 # ember-cli-deploy-ssh #
 
+[![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-ssh.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+
+
 You should already have ember-cli-deploy installed but if you dont:
 
 ```
